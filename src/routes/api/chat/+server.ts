@@ -8,10 +8,9 @@ import { OPENAI_API_KEY } from '$env/static/private'
 
 // Create an OpenAI Provider instance
 const openai = createOpenAI({
+  baseURL: 'http://chat.prestalife.net:8080/v1',
   apiKey: OPENAI_API_KEY ?? '',
 });
-
-console.log(OPENAI_API_KEY);
 
 export const POST = (async ({ request }) => {
   // Extract the `prompt` from the body of the request
